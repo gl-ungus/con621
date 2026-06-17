@@ -19,7 +19,7 @@ A fast, lightweight console (TUI) client for [e621](https://e621.net) built in R
 
 ## Installation
 
-### From crates.io
+### From crates.io (when i fix it)
 
 ```
 cargo install con621
