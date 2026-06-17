@@ -1,0 +1,31 @@
+[package]
+name = "con621"
+version = "0.1.0"
+edition = "2021"
+description = "An e621 console/TUI client with inline image and video preview"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/gitlab-stack/con621"
+readme = "README.md"
+keywords = ["e621", "tui", "ratatui", "terminal", "cli", "yiff", "furry"]
+categories = ["command-line-utilities"]
+exclude = [".DS_Store", "Modelfile"]
+
+[dependencies]
+ratatui = "0.29"
+crossterm = "0.28"
+reqwest = { version = "0.12", features = ["json", "blocking"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+open = "5"
+dirs = "5"
+image = "0.25"
+ratatui-image = { version = "8", default-features = false, features = ["crossterm", "image-defaults"] }
+rand = "0.8"
+ffmpeg-sidecar = "2.5.2"
+rodio = "0.20"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+codegen-units = 1

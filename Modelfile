@@ -1,0 +1,7 @@
+FROM qwen3.5:0.8b
+
+PARAMETER temperature 1.5
+PARAMETER top_p 1.0
+PARAMETER top_k 0
+PARAMETER repeat_penalty 0.5
+PARAMETER repeat_last_n 0
